@@ -9,49 +9,49 @@ Compare C and Java syntax differences
 Understand memory addresses and references
 
 Program Files
-Copy.
+.
 ├── 08-25-2021-0b1.c  # Basic I/O example 1
 ├── 08-25-2021-0c1.c  # Basic I/O example 2
 └── 08-25-2021-0d1.c  # Basic I/O example 3
 Key Concepts
 Program Structure
-cCopy#include<stdio.h>
+c#include<stdio.h>
 
 int main(int argc, char* argv[]) {
     // program code
     return 0;
 }
 Java equivalent:
-javaCopypublic class Main {
+javapublic class Main {
     public static void main(String[] args) {
         // program code
     }
 }
 Variable Declaration and Initialization
 C:
-cCopyint a = 10;        // initialized
+cint a = 10;        // initialized
 int b;             // uninitialized (garbage value)
 char c = '1';      // character
 double d = 0.0;    // double precision float
 Java equivalent:
-javaCopyint a = 10;        // initialized
+javaint a = 10;        // initialized
 int b = 0;         // default value 0
 char c = '1';      // character
 double d = 0.0;    // default value 0.0
 Input/Output Operations
 Output in C vs Java
 C:
-cCopyprintf("value of a = %d\n", a);
+cprintf("value of a = %d\n", a);
 printf("values: %d, %c, %lf\n", b, c, d);
 Java equivalent:
-javaCopySystem.out.println("value of a = " + a);
+javaSystem.out.println("value of a = " + a);
 System.out.println("values: " + b + ", " + c + ", " + d);
 Input in C vs Java
 C:
-cCopyscanf("%d", &a);                   // integer input
+cscanf("%d", &a);                   // integer input
 scanf("%d %c %lf", &b, &c, &d);   // multiple inputs
 Java equivalent:
-javaCopya = scanner.nextInt();             // integer input
+javaa = scanner.nextInt();             // integer input
 b = scanner.nextInt();             // multiple inputs
 c = scanner.next().charAt(0);
 d = scanner.nextDouble();
@@ -84,25 +84,25 @@ Common Mistakes to Avoid
 
 Forgetting & in scanf:
 
-cCopyscanf("%d", a);    // Wrong
+cscanf("%d", a);    // Wrong
 scanf("%d", &a);   // Correct
 
 Using wrong format specifiers:
 
-cCopyprintf("%d", 3.14);    // Wrong
+cprintf("%d", 3.14);    // Wrong
 printf("%lf", 3.14);   // Correct
 
 Missing newline characters:
 
-cCopyprintf("Hello");     // No line break
+cprintf("Hello");     // No line break
 printf("Hello\n");   // With line break
 Compilation and Execution
 To compile:
-bashCopygcc -o program filename.c
+bashgcc -o program filename.c
 To run:
-bashCopy./program
+bash./program
 Example Usage
-bashCopy$ gcc -o example 08-25-2021-0b1.c
+bash$ gcc -o example 08-25-2021-0b1.c
 $ ./example
 BYE CS 1714
 value of a = 10 test
